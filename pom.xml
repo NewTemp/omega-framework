@@ -26,6 +26,7 @@
         <cglib-nodep.version>3.1</cglib-nodep.version>
         <opencc4j.version>1.1.0</opencc4j.version>
         <validation.version>2.0.0.CR3</validation.version>
+        <java.servlet.version>3.1.0</java.servlet.version>
     </properties>
 
     <modules>
@@ -73,6 +74,13 @@
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>${validation.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${java.servlet.version}</version>
+                <scope>provided</scope>
             </dependency>
 
         </dependencies>
