@@ -8,22 +8,24 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
-*@Description Happy!
-*@Author Allen.Lv
-*@Date 3/23/2020
-*@Time 11:35 PM
-*/
+ * @Description Happy!
+ * @Author Allen.Lv
+ * @Date 3/23/2020
+ * @Time 11:35 PM
+ */
 @ApiModel
 @Accessors(chain = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class OmegaResponse<T> {
 
     private OmegaResponseHeader header;
 
     private T data;
+
+    /**
+     * 操作时间
+     */
+    private Long currentTime;
 
     public OmegaResponse(T data) {
         this.data = data;
@@ -34,7 +36,7 @@ public class OmegaResponse<T> {
     }
 
     public static <T> OmegaResponse<T> create(String code, String message) {
-        return (OmegaResponse<T>) create(code, message, (Object)null);
+        return (OmegaResponse<T>) create(code, message, (Object) null);
     }
 
     public static <T> OmegaResponse<T> create(String code, String message, T data) {
@@ -71,6 +73,17 @@ public class OmegaResponse<T> {
     public OmegaResponse(final OmegaResponseHeader header, final T data) {
         this.header = header;
         this.data = data;
+    }
+
+    public OmegaResponse(final OmegaResponseHeader header, final Long currentTime) {
+        this.header = header;
+        this.currentTime = currentTime;
+    }
+
+    public OmegaResponse(final OmegaResponseHeader header, final T data, final Long currentTime) {
+        this.header = header;
+        this.data = data;
+        this.currentTime = currentTime;
     }
 
     public String toString() {
