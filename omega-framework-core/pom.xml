@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>omega-framework-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${module.version}</version>
     <packaging>jar</packaging>
 
     <name>omega-framework-core</name>
@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <!-- common包依赖-->
+        <dependency>
+            <groupId>com.omega.platform</groupId>
+            <artifactId>omega-framework-common</artifactId>
+            <version>${module.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -63,11 +70,7 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
         </dependency>
-        <!--chain end-->
-        <dependency>
-            <groupId>com.github.houbb</groupId>
-            <artifactId>opencc4j</artifactId>
-        </dependency>
+
     </dependencies>
 
     <build>
