@@ -1,6 +1,7 @@
-package com.omega.platform.core.base;
+package com.omega.platform.core.request;
 
 import com.omega.platform.common.usualenum.LanguageEnum;
+import com.omega.platform.common.usualenum.ReqSourceEnum;
 import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,7 +23,7 @@ import static com.omega.platform.common.usualenum.LanguageEnum.CN;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class BaseCommonReqHeader implements Serializable {
+public class OmegaReqHeader implements Serializable {
     private static final long serialVersionUID = 1L;
     /**
      * 客户端id
@@ -57,4 +58,9 @@ public class BaseCommonReqHeader implements Serializable {
      * 用户名称
      */
     private String userName;
+
+    /**
+     * 请求来源
+     */
+    private ReqSourceEnum reqSource;
 }

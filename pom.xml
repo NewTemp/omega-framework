@@ -25,6 +25,7 @@
         <druid.version>1.1.5</druid.version>
         <cglib-nodep.version>3.1</cglib-nodep.version>
         <opencc4j.version>1.1.0</opencc4j.version>
+        <validation.version>2.0.0.CR3</validation.version>
     </properties>
 
     <modules>
@@ -67,6 +68,13 @@
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
