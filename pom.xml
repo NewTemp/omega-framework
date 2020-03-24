@@ -30,6 +30,7 @@
         <java.servlet.version>3.1.0</java.servlet.version>
         <springframework-starter.version>2.2.5.RELEASE</springframework-starter.version>
         <spring-context.version>5.2.4.RELEASE</spring-context.version>
+        <aspectjrt.version>1.8.0</aspectjrt.version>
     </properties>
 
     <modules>
@@ -132,6 +133,17 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox-swagger-ui.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectjrt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjrt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
