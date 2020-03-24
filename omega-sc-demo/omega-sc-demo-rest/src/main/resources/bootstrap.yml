@@ -1,0 +1,20 @@
+server:
+  port: 6001
+
+spring:
+  application:
+    name: omega-sc-demo-rest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+  health:
+    rabbit:
+      enabled: false
+    redis:
+      enabled: false
