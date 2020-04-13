@@ -4,6 +4,14 @@ server:
 spring:
   application:
     name: omega-sc-demo-rest
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  cache:
+    type: redis
+  main:
+    allow-bean-definition-overriding: true
+
 
 management:
   endpoints:
@@ -18,3 +26,5 @@ management:
       enabled: false
     redis:
       enabled: false
+
+
